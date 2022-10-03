@@ -66,6 +66,16 @@ section {
     align-items: center;
 }
 
+section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #1c0522, transparent);
+    z-index: 1000;
+}
+
 section img {
     position: absolute;
     top: 0;
@@ -73,6 +83,7 @@ section img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    pointer-events: none;
 }
 
 section img#moon {
@@ -100,4 +111,22 @@ section img#mountains_front {
     color: #2b1055;
     font-size: 1.5em;
     z-index: 9;
+    transform: translateY(100px);
+}
+
+.sec {
+    position: relative;
+    padding: 100px;
+    background: #1c0522;
+}
+
+.sec h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.sec p {
+    font-size: 1.2em;
+    color: #fff;
 }
