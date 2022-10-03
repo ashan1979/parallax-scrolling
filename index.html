@@ -22,13 +22,29 @@
         <img src="/images/moon.png" id="moon" alt="moon">
         <img src="/images/mountains_behind.png" id="mountains_behind" alt="mountains_behind">
         <h2 id="text">Moon Light</h2>
-        <a href="#" id="btn">Explore</a>
+        <a href="#sec" id="btn">Explore</a>
         <img src="/images/mountains_front.png" id="mountains_front" alt="mountains_front">
     </section>
-    <div class="sec">
+    <div class="sec" id="sec">
         <h2>Parallax Scrolling Effect</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto debitis, iure inventore delectus nemo ipsum illo maxime amet. Repellendus id quia ipsum. Fugit hic, praesentium dolorum architecto natus beatae assumenda? Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa impedit ipsam quasi perferendis eum labore reprehenderit praesentium in amet illum reiciendis accusantium odio dolores aspernatur odit qui ab, maiores laborum.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptas eligendi magnam dolores veniam dolore porro amet eius. Distinctio perspiciatis explicabo, iusto accusamus voluptates eveniet laborum consectetur ad nisi quibusdam?<br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas accusamus veritatis eum ipsam suscipit! Laboriosam perspiciatis illum ratione hic error libero in qui dignissimos delectus rem, ducimus quas at nostrum?</p>
     </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+
+        window.addEventListener('scroll' function() {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.05 + 'px';
+        })
+    </script>
 
 </body>
 </html>
